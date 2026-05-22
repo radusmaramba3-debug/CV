@@ -18,46 +18,49 @@ header {
     padding: 2rem 1rem;  
 }
 
-/* Aturan Dasar untuk Mobile-First */
+
 header h1 {
     color: #FFFFFF;
-    padding: 1.5rem;   /* Menerapkan instruksi soal */
-    font-size: 1.5rem;  /* Mengubah 40px statis menjadi 1.5rem untuk mobile */
+    padding: 1.5rem;   
+    font-size: 1.5rem;  
     margin-bottom: 0.5rem;
 }
 
-/* Aturan untuk Layar Desktop (Lebar >= 768px) */
+
 @media (min-width: 768px) {
     header h1 {
-        font-size: 2rem; /* Ukuran membesar otomatis di layar komputer */
+        font-size: 2rem; 
     }
 }
 
-header p { font-size: 1.125rem; } /* Berubah ke rem (18px / 16px dasar browser) */
 
-/* Tampilan Navigasi Default Mobile-First (< 768px) */
+header p { 
+    font-size: 1.125rem; 
+} 
+
+
 nav ul {
     list-style: none;
     margin-top: 1.5rem;
-    display: block; /* Diubah dari flex menjadi block agar menu menumpuk vertikal */
+    display: block; 
     text-align: center;
 }
 
 nav ul li {
-    margin: 10px 0; /* Memberikan ruang ketukan jari antar link di HP */
+    margin: 10px 0; 
 }
 
 nav ul li a {
     color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
-    display: block; /* Membuat seluruh area baris bisa diklik */
+    display: block; 
 }
 
-/* Tampilan Navigasi Desktop / Tablet (>= 768px) */
+
 @media (min-width: 768px) {
     nav ul {
-        display: flex; /* Mengembalikan susunan menu berjejer horizontal */
+        display: flex; 
         justify-content: center;
         gap: 1.5rem;
         margin-top: 1.5rem;
@@ -68,20 +71,18 @@ nav ul li a {
 }
 
 main {
-    width: 90%;        /* Memakai persen agar konten fleksibel menyusut di HP */
-    max-width: 50rem;  /* Mengubah 800px statis menjadi 50rem */
+    width: 90%;        
+    max-width: 50rem;  
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
 h2 {
-    font-size: 1.35rem; /* Setelan dasar mobile (setara ~21.6px) agar proporsional */
+    font-size: 1.35rem; 
     margin-bottom: 1rem;
     border-bottom: 3px solid #b71b14;
     padding-bottom: 0.5rem;
 }
-
-/* ... (kode bagian atas: body, header, nav, main, h2) ... */
 
 .kartu {
     background-color: #FFFFFF;
@@ -94,16 +95,14 @@ h2 {
 
 .kartu h3 {
     color: #1a1a1a;
-    font-size: 1.25rem; /* Berubah ke rem (20px / 16px dasar browser) */
+    font-size: 1.25rem; 
     margin-bottom: 0.5rem;
 }
 
-/* ========================================================= */
-/* TARUH KODE SOAL NOMOR 5 DI SINI (DI BAWAH .kartu h3)   */
-/* ========================================================= */
+
 .kartu-container {
     display: grid;
-    grid-template-columns: 1fr; /* 1 kolom di HP */
+    grid-template-columns: 1fr; 
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
@@ -121,17 +120,6 @@ h2 {
         grid-template-columns: repeat(3, 1fr);
     }
 }
-/* ========================================================= */
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
-    border-radius: 50%;
-}
-
-/* ... (kode bagian bawah: table, thead, th, td, footer) ... */
 
 img {
     max-width: 100%;
@@ -159,6 +147,14 @@ th, td {
     border: 1px solid #DDDDDD;
 }
 
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap; 
+    }
+}
+
 footer {
     background-color: #1a1a1a;
     color: #FFFFFF;
@@ -169,4 +165,18 @@ footer {
 
 footer strong {
     color: #b71b14;
+}
+
+
+@media (max-width: 768px) and (orientation: landscape) {
+    header {
+        padding: 0.8rem 1rem; 
+    }
+    header h1 {
+        padding: 0.5rem;
+        font-size: 1.3rem; 
+    }
+    header p {
+        font-size: 0.95rem;
+    }
 }
